@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean name="bookRepository" class="com.teyvelina.bookshop.reprository.BookRepository">
+        <constructor-arg>
+            <list>
+                <bean class="com.teyvelina.bookshop.domain.Book">
+                    <property name="name" value="Pushkin 123" />
+                    <property name="price" value="5.99" />
+                </bean>
+                <bean class="com.teyvelina.bookshop.domain.Book">
+                    <property name="name" value="Gogol" />
+                    <property name="price" value="3.40" />
+                </bean>
+            </list>
+        </constructor-arg>
+    </bean>
+
+    <bean name="bookService" class="com.teyvelina.bookshop.service.BookService">
+        <constructor-arg ref="bookRepository"/>
+    </bean>
+
+</beans>
