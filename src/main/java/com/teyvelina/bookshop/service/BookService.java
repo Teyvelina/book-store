@@ -2,15 +2,19 @@ package com.teyvelina.bookshop.service;
 
 import com.teyvelina.bookshop.domain.Bill;
 import com.teyvelina.bookshop.domain.Book;
-import com.teyvelina.bookshop.exeception.BookNotFoundException;
-import com.teyvelina.bookshop.exeception.NotEnoughMoneyException;
+import com.teyvelina.bookshop.exception.BookNotFoundException;
+import com.teyvelina.bookshop.exception.NotEnoughMoneyException;
 import com.teyvelina.bookshop.reprository.BookRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * Created by ateper on 2/3/17.
  */
+@Service
 public class BookService {
 
+    @Autowired
     private BookRepository bookRepository;
 
     public BookService(BookRepository bookRepository) {

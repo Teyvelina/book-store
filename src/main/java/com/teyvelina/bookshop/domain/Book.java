@@ -9,6 +9,14 @@ public class Book {
 
     private double price;
 
+    public Book() {
+    }
+
+    public Book(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }

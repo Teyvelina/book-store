@@ -1,4 +1,4 @@
-package com.teyvelina.bookshop.exeception;
+package com.teyvelina.bookshop.exception;
 
 /**
  * Created by ateper on 2/6/17.
